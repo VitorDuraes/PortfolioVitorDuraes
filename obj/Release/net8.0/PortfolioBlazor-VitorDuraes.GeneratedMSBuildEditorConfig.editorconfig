@@ -1,0 +1,125 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = PortfolioBlazor-VitorDuraes
+build_property.RootNamespace = PortfolioBlazor-VitorDuraes
+build_property.ProjectDir = S:\PortfolioBlazor-VitorDuraes\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = S:\PortfolioBlazor-VitorDuraes
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[S:/PortfolioBlazor-VitorDuraes/Components/App.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[S:/PortfolioBlazor-VitorDuraes/Components/Pages/Contato.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb250YXRvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[S:/PortfolioBlazor-VitorDuraes/Components/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb3VudGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[S:/PortfolioBlazor-VitorDuraes/Components/Pages/Error.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[S:/PortfolioBlazor-VitorDuraes/Components/Pages/Experiencia.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFeHBlcmllbmNpYS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[S:/PortfolioBlazor-VitorDuraes/Components/Pages/Habilidades.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIYWJpbGlkYWRlcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[S:/PortfolioBlazor-VitorDuraes/Components/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[S:/PortfolioBlazor-VitorDuraes/Components/Pages/Projetos.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQcm9qZXRvcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[S:/PortfolioBlazor-VitorDuraes/Components/Pages/Weather.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[S:/PortfolioBlazor-VitorDuraes/Components/Routes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[S:/PortfolioBlazor-VitorDuraes/Components/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[S:/PortfolioBlazor-VitorDuraes/PortfolioVitorDuraes/Components/App.razor]
+build_metadata.AdditionalFiles.TargetPath = UG9ydGZvbGlvVml0b3JEdXJhZXNcQ29tcG9uZW50c1xBcHAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[S:/PortfolioBlazor-VitorDuraes/PortfolioVitorDuraes/Components/Pages/Contato.razor]
+build_metadata.AdditionalFiles.TargetPath = UG9ydGZvbGlvVml0b3JEdXJhZXNcQ29tcG9uZW50c1xQYWdlc1xDb250YXRvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[S:/PortfolioBlazor-VitorDuraes/PortfolioVitorDuraes/Components/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UG9ydGZvbGlvVml0b3JEdXJhZXNcQ29tcG9uZW50c1xQYWdlc1xDb3VudGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[S:/PortfolioBlazor-VitorDuraes/PortfolioVitorDuraes/Components/Pages/Error.razor]
+build_metadata.AdditionalFiles.TargetPath = UG9ydGZvbGlvVml0b3JEdXJhZXNcQ29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[S:/PortfolioBlazor-VitorDuraes/PortfolioVitorDuraes/Components/Pages/Experiencia.razor]
+build_metadata.AdditionalFiles.TargetPath = UG9ydGZvbGlvVml0b3JEdXJhZXNcQ29tcG9uZW50c1xQYWdlc1xFeHBlcmllbmNpYS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[S:/PortfolioBlazor-VitorDuraes/PortfolioVitorDuraes/Components/Pages/Habilidades.razor]
+build_metadata.AdditionalFiles.TargetPath = UG9ydGZvbGlvVml0b3JEdXJhZXNcQ29tcG9uZW50c1xQYWdlc1xIYWJpbGlkYWRlcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[S:/PortfolioBlazor-VitorDuraes/PortfolioVitorDuraes/Components/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UG9ydGZvbGlvVml0b3JEdXJhZXNcQ29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[S:/PortfolioBlazor-VitorDuraes/PortfolioVitorDuraes/Components/Pages/Projetos.razor]
+build_metadata.AdditionalFiles.TargetPath = UG9ydGZvbGlvVml0b3JEdXJhZXNcQ29tcG9uZW50c1xQYWdlc1xQcm9qZXRvcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[S:/PortfolioBlazor-VitorDuraes/PortfolioVitorDuraes/Components/Pages/Weather.razor]
+build_metadata.AdditionalFiles.TargetPath = UG9ydGZvbGlvVml0b3JEdXJhZXNcQ29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[S:/PortfolioBlazor-VitorDuraes/PortfolioVitorDuraes/Components/Routes.razor]
+build_metadata.AdditionalFiles.TargetPath = UG9ydGZvbGlvVml0b3JEdXJhZXNcQ29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[S:/PortfolioBlazor-VitorDuraes/PortfolioVitorDuraes/Components/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = UG9ydGZvbGlvVml0b3JEdXJhZXNcQ29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[S:/PortfolioBlazor-VitorDuraes/Components/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-pfg8dqcccw
+
+[S:/PortfolioBlazor-VitorDuraes/Components/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-b70auitcb3
+
+[S:/PortfolioBlazor-VitorDuraes/PortfolioVitorDuraes/Components/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = UG9ydGZvbGlvVml0b3JEdXJhZXNcQ29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-d74dqgotqh
+
+[S:/PortfolioBlazor-VitorDuraes/PortfolioVitorDuraes/Components/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = UG9ydGZvbGlvVml0b3JEdXJhZXNcQ29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-dn4gev3p3j

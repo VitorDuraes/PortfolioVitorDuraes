@@ -1,0 +1,53 @@
+{
+  "Files": [
+    {
+      "Id": "S:\\PortfolioVitorDuraes\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\PortfolioVitorDuraes.bundle.scp.css",
+      "PackagePath": "staticwebassets\\PortfolioVitorDuraes.p6f56hysnm.bundle.scp.css"
+    },
+    {
+      "Id": "S:\\PortfolioVitorDuraes\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "S:\\PortfolioVitorDuraes\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "S:\\PortfolioVitorDuraes\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "S:\\PortfolioVitorDuraes\\wwwroot\\css\\portfolio.css",
+      "PackagePath": "staticwebassets\\css\\portfolio.css"
+    },
+    {
+      "Id": "S:\\PortfolioVitorDuraes\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "S:\\PortfolioVitorDuraes\\wwwroot\\js\\portfolio.js",
+      "PackagePath": "staticwebassets\\js\\portfolio.js"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.PortfolioVitorDuraes.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.PortfolioVitorDuraes.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.PortfolioVitorDuraes.props",
+      "PackagePath": "build\\PortfolioVitorDuraes.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.PortfolioVitorDuraes.props",
+      "PackagePath": "buildMultiTargeting\\PortfolioVitorDuraes.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.PortfolioVitorDuraes.props",
+      "PackagePath": "buildTransitive\\PortfolioVitorDuraes.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

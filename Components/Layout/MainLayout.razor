@@ -1,0 +1,69 @@
+@inherits LayoutComponentBase
+
+<div class="portfolio-layout">
+    <header class="portfolio-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <h2>Vitor Durães</h2>
+                    <span class="nav-subtitle">Desenvolvedor Backend</span>
+                </div>
+                <div class="nav-menu">
+                    <a href="/" class="nav-link">Início</a>
+                    <a href="/projetos" class="nav-link">Projetos</a>
+                    <a href="/experiencia" class="nav-link">Experiência</a>
+                    <a href="/habilidades" class="nav-link">Habilidades</a>
+                    <a href="/contato" class="nav-link">Contato</a>
+                </div>
+                <div class="nav-toggle" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="portfolio-main">
+        @Body
+    </main>
+
+    <footer class="portfolio-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Vitor Durães</h4>
+                <p>Desenvolvedor Backend especializado em .NET e C#</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>vitordo09@hotmail.com</p>
+                <p>+55 (34) 99177-5784</p>
+                <p>Uberlândia, MG</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links</h4>
+                <div class="social-links">
+                    <a href="https://github.com/VitorDuraes" target="_blank" class="social-link">GitHub</a>
+                    <a href="https://linkedin.com/in/vitor-duraes" target="_blank" class="social-link">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Vitor Durães. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</div>
+
+<div id="blazor-error-ui">
+    Ocorreu um erro não tratado.
+    <a href="" class="reload">Recarregar</a>
+    <a class="dismiss">🗙</a>
+</div>
+
+<script>
+    function toggleMobileMenu() {
+        const navMenu = document.querySelector('.nav-menu');
+        navMenu.classList.toggle('active');
+    }
+</script>
+

@@ -1,0 +1,5 @@
+S:\PortfolioBlazor-VitorDuraes\obj\Release\net8.0\PortfolioBlazor-VitorDuraes.GeneratedMSBuildEditorConfig.editorconfig
+S:\PortfolioBlazor-VitorDuraes\obj\Release\net8.0\PortfolioBlazor-VitorDuraes.AssemblyInfoInputs.cache
+S:\PortfolioBlazor-VitorDuraes\obj\Release\net8.0\PortfolioBlazor-VitorDuraes.AssemblyInfo.cs
+S:\PortfolioBlazor-VitorDuraes\obj\Release\net8.0\PortfolioBlazor-VitorDuraes.csproj.CoreCompileInputs.cache
+S:\PortfolioBlazor-VitorDuraes\obj\Release\net8.0\PortfolioBlazor-VitorDuraes.MvcApplicationPartsAssemblyInfo.cache

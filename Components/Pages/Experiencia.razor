@@ -1,0 +1,130 @@
+@page "/experiencia"
+@using PortfolioVitorDuraes.Services
+@inject PortfolioService PortfolioService
+
+<PageTitle>Experiência - Vitor Durães</PageTitle>
+
+<div class="container">
+    <section class="section">
+        <h1 class="section-title">Experiência Profissional</h1>
+        <p style="text-align: center; font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto 3rem;">
+            Minha trajetória profissional como Analista de Sistemas, com foco em desenvolvimento backend e automação de processos.
+        </p>
+        
+        <div style="max-width: 900px; margin: 0 auto;">
+            @foreach (var experiencia in experiencias)
+            {
+                <div class="card fade-in-up" style="margin-bottom: 2rem; position: relative;">
+                    @if (experiencia.DataFim == null)
+                    {
+                        <div style="position: absolute; top: -10px; right: -10px; background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 500; box-shadow: 0 3px 10px rgba(39, 174, 96, 0.3);">
+                            🟢 Atual
+                        </div>
+                    }
+                    
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+                        <div>
+                            <h3 class="card-title" style="margin-bottom: 0.5rem;">@experiencia.Cargo</h3>
+                            <h4 style="color: #667eea; font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem;">@experiencia.Empresa</h4>
+                        </div>
+                        <div style="text-align: right;">
+                            <p style="color: #7f8c8d; font-weight: 500; margin-bottom: 0.3rem;">
+                                @experiencia.DataInicio.ToString("MMM yyyy") - @(experiencia.DataFim?.ToString("MMM yyyy") ?? "Presente")
+                            </p>
+                            <p style="color: #95a5a6; font-size: 0.9rem;">
+                                @GetDuracao(experiencia.DataInicio, experiencia.DataFim)
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="card-content">
+                        <h5 style="margin-bottom: 1rem; color: #2c3e50; font-weight: 600;">Principais Responsabilidades:</h5>
+                        <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                            @foreach (var responsabilidade in experiencia.Responsabilidades)
+                            {
+                                <li style="margin-bottom: 0.8rem; color: #555;">@responsabilidade</li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            }
+        </div>
+        
+        <!-- Seção de Competências Desenvolvidas -->
+        <div style="margin-top: 4rem;">
+            <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem; color: #2c3e50;">Competências Desenvolvidas</h2>
+            <div class="grid grid-3">
+                <div class="card fade-in-up">
+                    <h4 style="color: #667eea; margin-bottom: 1rem; font-weight: 600;">🔧 Técnicas</h4>
+                    <ul style="margin-left: 1rem; line-height: 1.7; color: #555;">
+                        <li>Desenvolvimento de APIs RESTful</li>
+                        <li>Integração de sistemas</li>
+                        <li>Monitoramento e observabilidade</li>
+                        <li>Automação de processos</li>
+                        <li>Modelagem de banco de dados</li>
+                    </ul>
+                </div>
+                
+                <div class="card fade-in-up">
+                    <h4 style="color: #667eea; margin-bottom: 1rem; font-weight: 600;">☁️ DevOps & Cloud</h4>
+                    <ul style="margin-left: 1rem; line-height: 1.7; color: #555;">
+                        <li>CI/CD com Azure DevOps</li>
+                        <li>Infraestrutura como Código (Terraform)</li>
+                        <li>Deploy em AWS, Azure e GCP</li>
+                        <li>Containerização com Docker</li>
+                        <li>Versionamento com Git</li>
+                    </ul>
+                </div>
+                
+                <div class="card fade-in-up">
+                    <h4 style="color: #667eea; margin-bottom: 1rem; font-weight: 600;">👥 Interpessoais</h4>
+                    <ul style="margin-left: 1rem; line-height: 1.7; color: #555;">
+                        <li>Trabalho em equipes ágeis</li>
+                        <li>Comunicação técnica eficaz</li>
+                        <li>Resolução de problemas</li>
+                        <li>Gestão de chamados N1/N2</li>
+                        <li>Colaboração multidisciplinar</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Call to Action -->
+        <div style="text-align: center; margin-top: 4rem;">
+            <h3 style="margin-bottom: 1rem; color: #2c3e50;">Vamos trabalhar juntos?</h3>
+            <p style="margin-bottom: 2rem; color: #666;">Estou sempre em busca de novos desafios e oportunidades de crescimento.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="/projetos" class="btn btn-secondary">Ver Projetos</a>
+                <a href="/contato" class="btn btn-primary">Entre em Contato</a>
+            </div>
+        </div>
+    </section>
+</div>
+
+@code {
+    private List<PortfolioVitorDuraes.Models.ExperienciaProfissional> experiencias = new();
+
+    protected override void OnInitialized()
+    {
+        experiencias = PortfolioService.GetExperiencias().OrderByDescending(e => e.DataInicio).ToList();
+    }
+
+    private string GetDuracao(DateTime inicio, DateTime? fim)
+    {
+        var dataFim = fim ?? DateTime.Now;
+        var duracao = dataFim - inicio;
+        
+        var anos = (int)(duracao.TotalDays / 365);
+        var meses = (int)((duracao.TotalDays % 365) / 30);
+        
+        if (anos > 0 && meses > 0)
+            return $"{anos} ano{(anos > 1 ? "s" : "")} e {meses} mes{(meses > 1 ? "es" : "")}";
+        else if (anos > 0)
+            return $"{anos} ano{(anos > 1 ? "s" : "")}";
+        else if (meses > 0)
+            return $"{meses} mes{(meses > 1 ? "es" : "")}";
+        else
+            return "Menos de 1 mês";
+    }
+}
+

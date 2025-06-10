@@ -1,0 +1,122 @@
+@page "/"
+@using PortfolioVitorDuraes.Services
+@inject PortfolioService PortfolioService
+
+<PageTitle>Vitor Durães - Desenvolvedor Backend</PageTitle>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="fade-in-up">
+            <h1 class="hero-title">Vitor Durães</h1>
+            <h2 class="hero-subtitle">Desenvolvedor Backend Especialista em .NET</h2>
+            <p class="hero-description">
+                @PortfolioService.GetResumo()
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="/projetos" class="btn btn-primary">Ver Projetos</a>
+                <a href="/contato" class="btn btn-secondary">Entre em Contato</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projetos em Destaque -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Projetos em Destaque</h2>
+        <div class="grid grid-2">
+            @foreach (var projeto in projetos.Where(p => p.EmDestaque).Take(2))
+            {
+                <div class="card fade-in-up">
+                    <h3 class="card-title">@projeto.Nome</h3>
+                    <p class="card-content">@projeto.Descricao</p>
+                    <div class="tech-tags">
+                        @foreach (var tech in projeto.Tecnologias)
+                        {
+                            <span class="tech-tag">@tech</span>
+                        }
+                    </div>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="/projetos" class="btn btn-primary">Ver Detalhes</a>
+                    </div>
+                </div>
+            }
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="/projetos" class="btn btn-secondary">Ver Todos os Projetos</a>
+        </div>
+    </div>
+</section>
+
+<!-- Habilidades Principais -->
+<section class="section" style="background-color: rgb(3, 3, 3); padding: 4rem 0;">
+    <div class="container">
+        <h2 class="section-title">Principais Habilidades</h2>
+        <div class="grid grid-3">
+            @foreach (var categoria in habilidades.GroupBy(h => h.Categoria).Take(3))
+            {
+                <div class="card fade-in-up">
+                    <h3 class="card-title">@categoria.Key</h3>
+                    @foreach (var habilidade in categoria.Take(4))
+                    {
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>@habilidade.Nome</span>
+                                <span>@(habilidade.NivelProficiencia * 20)%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: @(habilidade.NivelProficiencia * 20)%"></div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="/habilidades" class="btn btn-secondary">Ver Todas as Habilidades</a>
+        </div>
+    </div>
+</section>
+
+<!-- Experiência Recente -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Experiência Atual</h2>
+        @{
+            var experienciaAtual = experiencias.FirstOrDefault(e => e.DataFim == null);
+        }
+        @if (experienciaAtual != null)
+        {
+            <div class="card fade-in-up" style="max-width: 800px; margin: 0 auto;">
+                <h3 class="card-title">@experienciaAtual.Cargo</h3>
+                <p class="card-subtitle">@experienciaAtual.Empresa • @experienciaAtual.DataInicio.ToString("MMM yyyy") - Presente</p>
+                <div class="card-content">
+                    <ul style="margin-left: 1.5rem;">
+                        @foreach (var responsabilidade in experienciaAtual.Responsabilidades.Take(4))
+                        {
+                            <li style="margin-bottom: 0.5rem;">@responsabilidade</li>
+                        }
+                    </ul>
+                </div>
+                <div style="margin-top: 1.5rem; text-align: center;">
+                    <a href="/experiencia" class="btn btn-primary">Ver Experiência Completa</a>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+@code {
+    private List<PortfolioVitorDuraes.Models.Projeto> projetos = new();
+    private List<PortfolioVitorDuraes.Models.ExperienciaProfissional> experiencias = new();
+    private List<PortfolioVitorDuraes.Models.Habilidade> habilidades = new();
+
+    protected override void OnInitialized()
+    {
+        projetos = PortfolioService.GetProjetos();
+        experiencias = PortfolioService.GetExperiencias();
+        habilidades = PortfolioService.GetHabilidades();
+    }
+}
+

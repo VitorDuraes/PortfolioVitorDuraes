@@ -1,0 +1,179 @@
+@page "/habilidades"
+@using PortfolioVitorDuraes.Services
+@inject PortfolioService PortfolioService
+
+<PageTitle>Habilidades - Vitor Durães</PageTitle>
+
+<div class="container">
+    <section class="section">
+        <h1 class="section-title">Habilidades Técnicas</h1>
+        <p style="text-align: center; font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto 3rem;">
+            Minhas competências técnicas organizadas por categoria, com níveis de proficiência baseados em experiência prática.
+        </p>
+        
+        <div class="grid grid-2">
+            @foreach (var categoria in habilidades.GroupBy(h => h.Categoria))
+            {
+                <div class="card fade-in-up">
+                    <h3 class="card-title" style="display: flex; align-items: center; gap: 0.5rem;">
+                        @GetCategoriaIcon(categoria.Key)
+                        @categoria.Key
+                    </h3>
+                    
+                    @foreach (var habilidade in categoria.OrderByDescending(h => h.NivelProficiencia))
+                    {
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span style="font-weight: 500;">@habilidade.Nome</span>
+                                <span style="color: #667eea; font-weight: 600;">@GetNivelTexto(habilidade.NivelProficiencia)</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: @(habilidade.NivelProficiencia * 20)%"></div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+        
+        <!-- Seção de Certificações e Formação -->
+        <div style="margin-top: 4rem;">
+            <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem; color: #2c3e50;">Formação e Certificações</h2>
+            <div class="grid grid-2">
+                <div class="card fade-in-up">
+                    <h4 style="color: #667eea; margin-bottom: 1rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
+                        🎓 Formação Acadêmica
+                    </h4>
+                    <div style="margin-bottom: 1.5rem;">
+                        <h5 style="margin-bottom: 0.5rem; color: #2c3e50;">Análise e Desenvolvimento de Sistemas</h5>
+                        <p style="color: #7f8c8d; margin-bottom: 0.3rem;">UNOPAR</p>
+                        <p style="color: #95a5a6; font-size: 0.9rem;">Ago 2022 - Dez 2024</p>
+                    </div>
+                </div>
+                
+                <div class="card fade-in-up">
+                    <h4 style="color: #667eea; margin-bottom: 1rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
+                        📜 Certificações
+                    </h4>
+                    <div style="margin-bottom: 1.5rem;">
+                        <h5 style="margin-bottom: 0.5rem; color: #2c3e50;">Formação em Desenvolvimento C#</h5>
+                        <p style="color: #7f8c8d; margin-bottom: 0.3rem;">Digital Innovation One (DIO)</p>
+                        <p style="color: #95a5a6; font-size: 0.9rem;">Dez 2024 - Mai 2025</p>
+                        <p style="color: #555; font-size: 0.9rem; margin-top: 0.5rem;">
+                            ASP.NET Core, Entity Framework, APIs RESTful, testes automatizados e arquitetura
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Seção de Metodologias e Práticas -->
+        <div style="margin-top: 4rem;">
+            <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem; color: #2c3e50;">Metodologias e Práticas</h2>
+            <div class="grid grid-3">
+                <div class="card fade-in-up">
+                    <h4 style="color: #667eea; margin-bottom: 1rem; font-weight: 600;">⚡ Metodologias Ágeis</h4>
+                    <ul style="margin-left: 1rem; line-height: 1.7; color: #555;">
+                        <li>Scrum</li>
+                        <li>Kanban</li>
+                        <li>Sprint Planning</li>
+                        <li>Daily Standups</li>
+                        <li>Retrospectivas</li>
+                    </ul>
+                </div>
+                
+                <div class="card fade-in-up">
+                    <h4 style="color: #667eea; margin-bottom: 1rem; font-weight: 600;">🏗️ Arquitetura</h4>
+                    <ul style="margin-left: 1rem; line-height: 1.7; color: #555;">
+                        <li>Clean Architecture</li>
+                        <li>Domain Driven Design (DDD)</li>
+                        <li>SOLID Principles</li>
+                        <li>Design Patterns</li>
+                        <li>Microservices</li>
+                    </ul>
+                </div>
+                
+                <div class="card fade-in-up">
+                    <h4 style="color: #667eea; margin-bottom: 1rem; font-weight: 600;">🧪 Qualidade</h4>
+                    <ul style="margin-left: 1rem; line-height: 1.7; color: #555;">
+                        <li>Testes Unitários</li>
+                        <li>Testes de Integração</li>
+                        <li>Code Review</li>
+                        <li>Refactoring</li>
+                        <li>Documentação</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Legenda dos Níveis -->
+        <div style="margin-top: 4rem;">
+            <div class="card" style="max-width: 600px; margin: 0 auto;">
+                <h4 style="text-align: center; margin-bottom: 1.5rem; color: #2c3e50;">Legenda dos Níveis de Proficiência</h4>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; text-align: center;">
+                    <div>
+                        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); width: 100%; height: 8px; border-radius: 4px; margin-bottom: 0.5rem;"></div>
+                        <strong style="color: #2c3e50;">Avançado</strong>
+                        <p style="font-size: 0.8rem; color: #666;">5/5</p>
+                    </div>
+                    <div>
+                        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); width: 80%; height: 8px; border-radius: 4px; margin-bottom: 0.5rem;"></div>
+                        <strong style="color: #2c3e50;">Proficiente</strong>
+                        <p style="font-size: 0.8rem; color: #666;">4/5</p>
+                    </div>
+                    <div>
+                        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); width: 60%; height: 8px; border-radius: 4px; margin-bottom: 0.5rem;"></div>
+                        <strong style="color: #2c3e50;">Intermediário</strong>
+                        <p style="font-size: 0.8rem; color: #666;">3/5</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Call to Action -->
+        <div style="text-align: center; margin-top: 4rem;">
+            <h3 style="margin-bottom: 1rem; color: #2c3e50;">Interessado em meu perfil técnico?</h3>
+            <p style="margin-bottom: 2rem; color: #666;">Vamos conversar sobre como posso contribuir para seu projeto.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="/projetos" class="btn btn-secondary">Ver Projetos</a>
+                <a href="/contato" class="btn btn-primary">Entre em Contato</a>
+            </div>
+        </div>
+    </section>
+</div>
+
+@code {
+    private List<PortfolioVitorDuraes.Models.Habilidade> habilidades = new();
+
+    protected override void OnInitialized()
+    {
+        habilidades = PortfolioService.GetHabilidades();
+    }
+
+    private string GetCategoriaIcon(string categoria)
+    {
+        return categoria switch
+        {
+            "Linguagens" => "💻",
+            "Frameworks" => "🔧",
+            "Bancos de Dados" => "🗄️",
+            "DevOps" => "☁️",
+            "Arquitetura" => "🏗️",
+            _ => "⚡"
+        };
+    }
+
+    private string GetNivelTexto(int nivel)
+    {
+        return nivel switch
+        {
+            5 => "Avançado",
+            4 => "Proficiente",
+            3 => "Intermediário",
+            2 => "Básico",
+            1 => "Iniciante",
+            _ => "N/A"
+        };
+    }
+}
+

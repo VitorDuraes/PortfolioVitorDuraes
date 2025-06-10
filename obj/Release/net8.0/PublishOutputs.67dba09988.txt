@@ -1,0 +1,7 @@
+S:\PortfolioVitorDuraes\publish\PortfolioVitorDuraes.exe
+S:\PortfolioVitorDuraes\publish\appsettings.Development.json
+S:\PortfolioVitorDuraes\publish\appsettings.json
+S:\PortfolioVitorDuraes\publish\PortfolioVitorDuraes.dll
+S:\PortfolioVitorDuraes\publish\PortfolioVitorDuraes.deps.json
+S:\PortfolioVitorDuraes\publish\PortfolioVitorDuraes.runtimeconfig.json
+S:\PortfolioVitorDuraes\publish\PortfolioVitorDuraes.pdb

@@ -1,0 +1,13 @@
+S:\PortfolioBlazor-VitorDuraes\bin\Release\net8.0\publish\PortfolioBlazor.exe
+S:\PortfolioBlazor-VitorDuraes\bin\Release\net8.0\publish\publish\web.config
+S:\PortfolioBlazor-VitorDuraes\bin\Release\net8.0\publish\appsettings.Development.json
+S:\PortfolioBlazor-VitorDuraes\bin\Release\net8.0\publish\appsettings.json
+S:\PortfolioBlazor-VitorDuraes\bin\Release\net8.0\publish\publish\appsettings.Development.json
+S:\PortfolioBlazor-VitorDuraes\bin\Release\net8.0\publish\publish\appsettings.json
+S:\PortfolioBlazor-VitorDuraes\bin\Release\net8.0\publish\publish\PortfolioBlazor.deps.json
+S:\PortfolioBlazor-VitorDuraes\bin\Release\net8.0\publish\publish\PortfolioBlazor.runtimeconfig.json
+S:\PortfolioBlazor-VitorDuraes\bin\Release\net8.0\publish\publish\PortfolioBlazor.staticwebassets.endpoints.json
+S:\PortfolioBlazor-VitorDuraes\bin\Release\net8.0\publish\PortfolioBlazor.dll
+S:\PortfolioBlazor-VitorDuraes\bin\Release\net8.0\publish\PortfolioBlazor.deps.json
+S:\PortfolioBlazor-VitorDuraes\bin\Release\net8.0\publish\PortfolioBlazor.runtimeconfig.json
+S:\PortfolioBlazor-VitorDuraes\bin\Release\net8.0\publish\PortfolioBlazor.pdb

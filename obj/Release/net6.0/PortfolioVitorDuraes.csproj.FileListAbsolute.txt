@@ -1,0 +1,6 @@
+S:\PortfolioVitorDuraes\obj\Release\net6.0\PortfolioVitorDuraes.GeneratedMSBuildEditorConfig.editorconfig
+S:\PortfolioVitorDuraes\obj\Release\net6.0\PortfolioVitorDuraes.AssemblyInfoInputs.cache
+S:\PortfolioVitorDuraes\obj\Release\net6.0\PortfolioVitorDuraes.AssemblyInfo.cs
+S:\PortfolioVitorDuraes\obj\Release\net6.0\PortfolioVitorDuraes.csproj.CoreCompileInputs.cache
+S:\PortfolioVitorDuraes\obj\Release\net6.0\PortfolioVitorDuraes.MvcApplicationPartsAssemblyInfo.cache
+S:\PortfolioVitorDuraes\obj\Release\net6.0\PortfolioVitorDuraes.sourcelink.json

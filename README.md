@@ -50,7 +50,10 @@ PortfolioBlazor/
 │   │   └── Contato.razor            # Página de contato
 │   └── App.razor                    # Componente raiz
 ├── Models/
-│   └── PortfolioModels.cs           # Modelos de dados
+│   └── Contato.cs                   # Modelos de dados
+|   └── Experiencia.cs
+|   └── Habilidade.cs
+|   └── Projeto.cs           
 ├── Services/
 │   └── PortfolioService.cs          # Serviço com dados do portfólio
 ├── wwwroot/

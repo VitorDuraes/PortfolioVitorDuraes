@@ -81,11 +81,11 @@ namespace PortfolioVitorDuraes.Services
                 new Projeto
                 {
                     Nome = "CRM - Sistema de Gestão para Gráficas",
-                    Descricao = "Sistema CRM completo para gestão de clientes e pedidos, com autenticação, segmentação automática, relatórios gerenciais, previsão de vendas com inteligência artificial em Python, validação com FluentValidation, integração com AutoMapper e injeção de dependência",
-                    Tecnologias = new List<string> { "ASP.NET Core", "Entity Framework Core", "SQL Server", "FluentValidation", "AutoMapper", "ClosedXML", "Python.NET", "Bootstrap", "scikit-learn", "Python" },
+                    Descricao = "Sistema CRM completo para gestão de clientes e pedidos, com autenticação, segmentação automática, relatórios gerenciais, previsão de vendas com inteligência artificial, validação com FluentValidation, integração com AutoMapper e injeção de dependência",
+                    Tecnologias = new List<string> { "ASP.NET Core", "Entity Framework Core", "SQL Server", "FluentValidation", "AutoMapper", "ClosedXML", "ML.NET", "Bootstrap", "Blazor"},
                     DataCriacao = new DateTime(2025, 5, 6),
                     EmDestaque = true,
-                    GithubUrl = "https://github.com/VitorDuraes/CRMProjeto"
+                    GithubUrl = "https://github.com/VitorDuraes/CRMGrafica/tree/master/CRMGrafica"
                 },
                 new Projeto
                 {

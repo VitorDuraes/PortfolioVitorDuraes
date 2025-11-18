@@ -1,11 +1,16 @@
-# Etapa de build
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /app
-COPY . .
-RUN dotnet publish ./PortfolioVitorDuraes.csproj -c Release -o out
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS builder
+WORKDIR /src
 
-# Etapa final
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+COPY *.csproj .
+RUN dotnet restore
+
+COPY . .
+RUN dotnet publish "PortfolioBlazor.csproj" -c Release -o /app/publish
+
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
-COPY --from=build /app/out ./
-ENTRYPOINT ["dotnet", "PortfolioVitorDuraes.dll"]
+COPY --from=builder /app/publish .
+
+EXPOSE 8080
+
+ENTRYPOINT ["dotnet", "PortfolioBlazor.dll"]

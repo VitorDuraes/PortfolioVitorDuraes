@@ -1,0 +1,47 @@
+name: Deploy Portfolio Blazor
+
+on:
+  push:
+    branches: [main] # Roda sempre que der push na 'main'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Login to ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+
+      - name: Build, tag, and push image
+        id: build-image
+        env:
+          ECR_REPO_URL: ${{ secrets.ECR_REPO_URL }}
+          IMAGE_TAG: ${{ github.sha }} # Tag única baseada no commit
+        run: |
+          docker build -t $ECR_REPO_URL:$IMAGE_TAG .
+          docker push $ECR_REPO_URL:$IMAGE_TAG
+          echo "image_uri=$ECR_REPO_URL:$IMAGE_TAG" >> $GITHUB_ENV
+
+      - name: Configure kubectl
+        run: |
+          aws eks update-kubeconfig --name ${{ secrets.EKS_CLUSTER_NAME }} --region ${{ secrets.AWS_REGION }}
+
+      - name: Deploy to EKS
+        env:
+          IMAGE_URI: ${{ env.image_uri }}
+        run: |
+          # Substitui o placeholder 'IMAGEM_AQUI' pela imagem real
+          sed -i "s|image: .*|image: $IMAGE_URI|g" k8s/deployment.yaml
+
+          # Aplica os manifestos no EKS
+          kubectl apply -f k8s/
